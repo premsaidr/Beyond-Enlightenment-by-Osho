@@ -330,6 +330,42 @@
       .header-inner { flex-direction: column; }
       .header-right { text-align: left; }
     }
+    /* ── 헤더 이미지 ── */
+.header-images {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+.header-images img {
+  display: block;
+  border-radius: 12px;
+  box-shadow: 0 6px 24px rgba(0,0,0,.35);
+  transition: transform .3s ease;
+}
+.header-images img:hover { transform: scale(1.04); }
+.img-book {
+  width: 110px;
+  border: 2px solid rgba(242,197,61,.5);
+}
+.img-osho {
+  width: 110px;
+  border: 2px solid rgba(242,197,61,.3);
+  border-radius: 50%;
+}
+.img-caption {
+  font-family: 'EB Garamond', serif;
+  font-style: italic;
+  font-size: 13px;
+  color: rgba(255,255,255,.4);
+  text-align: center;
+  line-height: 1.4;
+}
+@media (max-width: 767px) {
+  .header-images { flex-direction: row; justify-content: flex-start; }
+  .img-book, .img-osho { width: 80px; }
+}
   </style>
 </head>
 <body>
@@ -361,6 +397,12 @@
         <span class="main-title-en">Beyond Enlightenment</span>
         <p class="main-sub-ko">오쇼(Osho)의 32개 담론 — 핵심 지혜 한영대역</p>
         <span class="main-sub-en">32 Discourses · Bilingual Key Insights</span>
+      </div>
+      <div class="header-images">
+        <img src="book-cover.png" alt="Beyond Enlightenment 책 표지" class="img-book">
+        <span class="img-caption">Book Cover</span>
+        <img src="osho-portrait.png" alt="오쇼 일러스트" class="img-osho">
+        <span class="img-caption">Osho (1931–1990)</span>
       </div>
       <div class="header-right">
         <strong>32 Chapters · 374 Pages</strong>
